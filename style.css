@@ -1,0 +1,50 @@
+
+
+.paintBoard {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+
+#quadro {
+    margin-left: 120px;
+    width: 600px;
+    line-height: 0px;
+    word-spacing: 0px;
+    
+}
+
+.black{
+background-color: black;
+border: 1px solid;
+display: inline-block;
+width: 100px;
+height: 100px;
+margin: 20 20 20 20 ;
+}
+.red{
+    background-color: red;
+    border: 1px solid;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 20 20 20 20 ;
+    }
+    .blue{
+        background-color: blue;
+        border: 1px solid;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 20 20 20 20 ;
+        }
+        .green{
+            background-color: green;
+            border: 1px solid;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 20 20 20 20 ;
+            }
