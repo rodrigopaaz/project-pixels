@@ -58,5 +58,15 @@ quadroPixel.addEventListener('click', (object) => {
     
 })
 
+reset = document.getElementById('clear-board')
+reset.addEventListener('click', function () {
+for(let index = 0; index <= 24; index += 1){   	
+    let select = document.getElementsByClassName('pixel')[index]
+    if (select.classList.contains('color')){
+    select.style.background = 
+    select = select.className = 'pixel'}
+    
+    }
+})
 
 
