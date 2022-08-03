@@ -1,55 +1,51 @@
-/* document.addEventListener('click', function (event) {
-    if ( event.target.classList.contains( 'accordion-link' ) ) {
-        // Do something...
-    }
-}, false); */
-
-/* const cores = document.getElementById('color-palette'); */
-const classe = document.getElementById('pixel-board');
+const quadroPixel = document.getElementById('pixel-board');
 const divAdd1 = document.createElement('div');
+let pixel = document.getElementsByClassName('pixel')
 divAdd1.className = 'color';
+const paleta = document.getElementById('color-palette');
 
-for (let index = 1; index <= 25; index += 1) {
-  const divAdd = document.createElement('div');
-  divAdd.className = 'pixel';
-  classe.appendChild(divAdd);
-}
+let blue = document.querySelector('.color.blue');
+let black = document.querySelector('.color.black');
+let red = document.querySelector('.color.red');
+let green = document.querySelector('.color.green');
 
-const blue = document.querySelector('.color.blue');
-const black = document.querySelector('.color.black');
-const red = document.querySelector('.color.red');
-const green = document.querySelector('.color.green');
-
-blue.addEventListener('click', () => {
-  sessionStorage.setItem('color', 'blue');
+red.addEventListener('click', () => {
+    red.classList.add('selected')
+    black.classList.remove('selected')
+    blue.classList.remove('selected')
+    green.classList.remove('selected') 
 });
 black.addEventListener('click', () => {
-  sessionStorage.setItem('color', 'black');
+    black.classList.add('selected');
+    red.classList.remove('selected');
+    blue.classList.remove('selected');
+    green.classList.remove('selected');
 });
-red.addEventListener('click', () => {
-  sessionStorage.setItem('color', 'red');
+blue.addEventListener('click', () => {
+    blue.classList.add('selected');
+    red.classList.remove('selected');
+    black.classList.remove('selected');
+    green.classList.remove('selected');
 });
 green.addEventListener('click', () => {
-  sessionStorage.setItem('color', 'green');
+    green.classList.add('selected')
+    black.classList.remove('selected')
+    blue.classList.remove('selected')
+    red.classList.remove('selected') 
 });
 
-/* const setColor = document.querySelector('div.paintBoard');
-setColor.addEventListener('click', () => {
-  setcolor.style.background = sessionStorage.color;
-}); */
+paleta.addEventListener('click', (object) => {
+    const capturaCor = object.target.className
+    sessionStorage.setItem('cor', capturaCor)
+    
 
-/* function clicaNaPaleta(evento) {
-  let corClicada = evento.target.classname;
-  let corFavorita = document.getElementById('cor-favorita');
-  corFavorita.className = corClicada;
+});
 
-  let container = document.querySelector('#paleta');
-  container.addEventListener('click', clicaNaPaleta);
-}
- */
-/* classe.addEventListener('click', function (event) {
-    if ( event.target.classList.contains('div') ) {
-        classe.style.background = 'blue'
-    }
-    else { classe.style.background = 'green'}
-}, false); */
+quadroPixel.addEventListener('click', (object) => {
+  const capturaCor = object.target.className
+  capturaCor.className = 'selected'
+  document.getElementsByClassName(capturaCor);
+  
+});
+
+
