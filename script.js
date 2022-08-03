@@ -39,23 +39,22 @@ green.addEventListener('click', () => {
     red.classList.remove('selected') 
 });
 
+sessionStorage.setItem('cor', 'color black selected')
+
 paleta.addEventListener('click', (object) => {
-    const capturaCor = object.target.className.split(' ')
+    const capturaCor = object.target.className
     sessionStorage.setItem('cor', capturaCor)
-    
+ 
 
 });
 
 quadroPixel.addEventListener('click', (object) => {
-    let recover = JSON.stringify(sessionStorage.cor)
-    recover = recover.split(' ')
-    recover = recover.join()
-    recover = recover.replace(/,/g,"','")
-    recover = recover.replace(/"/g,"'")
-    console.log(recover)
-    const capturaCor = object.target.classList.add(recover[0])
-    
-    
+    let capturaCor = object.target.className = 'pixel'
+    let select = sessionStorage.cor 
+    select = select.split().join().split(' ')
+    capturaCor = object.target.classList.add(select[0])
+    capturaCor = object.target.classList.add(select[1])
+    //capturaCor = object.target.classList.add(select[2])
     
 })
 

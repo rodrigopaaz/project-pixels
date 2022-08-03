@@ -49,6 +49,20 @@ margin: 20 20 20 20 ;
             margin: 20 20 20 20 ;
             }
 
-            .color.red.selected {
-                background-color: aquamarine;
+            .color.red.pixel {
+                background-color: red;
+            }
+            .color.blue.pixel {
+                background-color: blue;
+            }
+            .color.black.pixel {
+                background-color: black;
+            }
+            .color.green.pixel {
+                background-color: green;
+            }
+
+            .pixel.color {
+                background-color: rgb(255, 255, 255);
+
             }
