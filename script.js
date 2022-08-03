@@ -9,6 +9,11 @@ let black = document.querySelector('.color.black');
 let red = document.querySelector('.color.red');
 let green = document.querySelector('.color.green');
 
+for(let index = 1; index <= 25; index += 1){   	
+    let divAdd = document.createElement('div')	
+    divAdd.className = 'pixel' 	
+    quadroPixel.appendChild(divAdd)}
+
 red.addEventListener('click', () => {
     red.classList.add('selected')
     black.classList.remove('selected')
@@ -35,17 +40,24 @@ green.addEventListener('click', () => {
 });
 
 paleta.addEventListener('click', (object) => {
-    const capturaCor = object.target.className
+    const capturaCor = object.target.className.split(' ')
     sessionStorage.setItem('cor', capturaCor)
     
 
 });
 
 quadroPixel.addEventListener('click', (object) => {
-  const capturaCor = object.target.className
-  capturaCor.className = 'selected'
-  document.getElementsByClassName(capturaCor);
-  
-});
+    let recover = JSON.stringify(sessionStorage.cor)
+    recover = recover.split(' ')
+    recover = recover.join()
+    recover = recover.replace(/,/g,"','")
+    recover = recover.replace(/"/g,"'")
+    console.log(recover)
+    const capturaCor = object.target.classList.add(recover[0])
+    
+    
+    
+})
+
 
 

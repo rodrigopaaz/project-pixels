@@ -10,13 +10,13 @@
 
 #pixel-board {
     margin-left: 120px;
-    width: 250px;
+    width: 210px;
     line-height: 0px;
     word-spacing: 0px;
     
 }
 
-.black{
+#color-palette .black{
 background-color: black;
 border: 1px solid black;
 display: inline-block;
@@ -24,7 +24,7 @@ width: 100px;
 height: 100px;
 margin: 20 20 20 20 ;
 }
-.red{
+#color-palette .red{
     background-color: red;
     border: 1px solid black;
     display: inline-block;
@@ -32,7 +32,7 @@ margin: 20 20 20 20 ;
     height: 100px;
     margin: 20 20 20 20 ;
     }
-    .blue{
+    #color-palette .blue{
         background-color: blue;
         border: 1px solid black;
         display: inline-block;
@@ -40,11 +40,15 @@ margin: 20 20 20 20 ;
         height: 100px;
         margin: 20 20 20 20 ;
         }
-        .green{
+        #color-palette .green{
             background-color: green;
             border: 1px solid black;
             display: inline-block;
             width: 100px;
             height: 100px;
             margin: 20 20 20 20 ;
+            }
+
+            .color.red.selected {
+                background-color: aquamarine;
             }
