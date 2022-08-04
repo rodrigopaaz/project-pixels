@@ -40,26 +40,26 @@ green.addEventListener('click', () => {
   red.classList.remove('selected');
 });
 
-sessionStorage.setItem('cor', 'color black selected');
+sessionStorage.setItem('cor', 'black');
+
 paleta.addEventListener('click', (object) => {
-  const capturaCor = object.target.className;
+  const capturaCor = object.target.style.background;
   sessionStorage.setItem('cor', capturaCor);
 });
 
 quadroPixel.addEventListener('click', (object) => {
   let capturaCor = (object.target.className = 'pixel');
   let select = sessionStorage.cor;
-  select = select.split().join().split(' ');
-  capturaCor = object.target.classList.add(select[0]);
-  capturaCor = object.target.classList.add(select[1]);
+  capturaCor = object.target.style.background =select;
+
 });
 
 let reset = document.getElementById('clear-board');
 reset.addEventListener('click', () => {
   for (let index = 0; index <= 24; index += 1) {
     let select = document.getElementsByClassName('pixel')[index];
-    if (select.classList.contains('color')) {
-      select.style.background = select = select.className = 'pixel';
+    if (select.style.background != 'white') {
+      select.style.background = select = select.style.background = 'white';
     }
   }
 });
@@ -85,7 +85,7 @@ if (changeValue > 0 && changeValue < 250) {
 }
 
 if (changeValue >= 2500) {
-  quadroPixel.style.width = '1000px';
+    quadroPixel.style.width='1000px'
   for (let index = 1; index <= 2500; index += 1) {
     let divAdd = document.createElement('div');
     divAdd.className = 'pixel';
@@ -99,6 +99,11 @@ if (changeValue > 0) {
   }
 }
 
+/*   for (let index = 1; index <= 1; index += 1) {
+    let divAdd = document.createElement('div');
+    divAdd.className = 'pixel';
+    quadroPixel.appendChild(divAdd);  
+} */
 function minSize(size) {
   if (size === 1) {
     for (let index = 1; index <= 24; index += 1) {
@@ -132,14 +137,46 @@ function minSize(size) {
 
 minSize = minSize(changeValue);
 
-/* window.onload=function random() {
-  for (let index = 0; index <= pixel.length - 1; index += 1) {
-    let r = Math.random() * 255;
+
+    function random(valor) {
+      let r = Math.random() * 255;
     let g = Math.random() * 255;
     let b = Math.random() * 255;
-    let select = document.getElementsByClassName('pixel')[index]
-    select.style.background = `rgba(${r}, ${g}, ${b})`;
-  }
-}
- */
+    red.style.background = `rgba(${r}, ${g}, ${b})`;
+     }
+     
+random = random(red);
 
+function random2(valor) {
+    let r = Math.random() * 255;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+  let redPixel = document.querySelectorAll('.color');
+  let back = green.style.background = `rgba(${r}, ${g}, ${b})`;
+  green.style.background = back;
+   }
+   
+random2 = random2(green);
+
+function random3(valor) {
+    let r = Math.random() * 255;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+  let redPixel = document.querySelectorAll('.color');
+  let back = blue.style.background = `rgba(${r}, ${g}, ${b})`;
+  blue.style.background = back;
+   }
+   
+random3 = random3(red); 
+
+function random4(valor) {
+    let r = Math.random() * 255;
+  let g = Math.random() * 255;
+  let b = Math.random() * 255;
+  let redPixel = document.querySelectorAll('.color');
+  let back = black.style.background = 'black';
+  black.style.background = back;
+   }
+   
+random4 = random4(black); 
+ 
