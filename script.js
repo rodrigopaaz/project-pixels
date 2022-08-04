@@ -41,7 +41,6 @@ green.addEventListener('click', () => {
 });
 
 sessionStorage.setItem('cor', 'color black selected');
-
 paleta.addEventListener('click', (object) => {
   const capturaCor = object.target.className;
   sessionStorage.setItem('cor', capturaCor);
@@ -77,20 +76,21 @@ changeSize.addEventListener('submit', function () {
 });
 let changeValue = sessionStorage.size;
 changeValue = Number(changeValue);
-if(changeValue>0 && changeValue<50){
-for (let index = 0; index <= changeValue - 1; index += 1) {
-  let divAdd = document.createElement('div');
-  divAdd.className = 'pixel';
-  quadroPixel.appendChild(divAdd);
-}}
+if (changeValue > 0 && changeValue < 250) {
+  for (let index = 0; index <= changeValue - 1; index += 1) {
+    let divAdd = document.createElement('div');
+    divAdd.className = 'pixel';
+    quadroPixel.appendChild(divAdd);
+  }
+}
 
-if (changeValue>50){
-    for (let index = 1; index <= 50; index += 1) {
-        let divAdd = document.createElement('div');
-        divAdd.className = 'pixel';
-        quadroPixel.appendChild(divAdd);
-      }
-        
+if (changeValue >= 2500) {
+  quadroPixel.style.width = '1000px';
+  for (let index = 1; index <= 2500; index += 1) {
+    let divAdd = document.createElement('div');
+    divAdd.className = 'pixel';
+    quadroPixel.appendChild(divAdd);
+  }
 }
 
 if (changeValue > 0) {
@@ -99,51 +99,47 @@ if (changeValue > 0) {
   }
 }
 
-/*   for (let index = 1; index <= 1; index += 1) {
-    let divAdd = document.createElement('div');
-    divAdd.className = 'pixel';
-    quadroPixel.appendChild(divAdd);  
-} */
 function minSize(size) {
- if (size === 1){   
- for (let index = 1; index <= 24; index += 1) {
+  if (size === 1) {
+    for (let index = 1; index <= 24; index += 1) {
       let divAdd = document.createElement('div');
       divAdd.className = 'pixel';
-      quadroPixel.appendChild(divAdd)};
-      } if (size === 4){   
-        for (let index = 1; index <= 21; index += 1) {
-             let divAdd = document.createElement('div');
-             divAdd.className = 'pixel';
-             quadroPixel.appendChild(divAdd)};
-             } if (size === 9){   
-                for (let index = 1; index <= 16; index += 1) {
-                     let divAdd = document.createElement('div');
-                     divAdd.className = 'pixel';
-                     quadroPixel.appendChild(divAdd)};
-                     } if (size === 16){   
-                        for (let index = 1; index <= 9; index += 1) {
-                             let divAdd = document.createElement('div');
-                             divAdd.className = 'pixel';
-                             quadroPixel.appendChild(divAdd)};
-                             }
-                             
-  } 
+      quadroPixel.appendChild(divAdd);
+    }
+  }
+  if (size === 4) {
+    for (let index = 1; index <= 21; index += 1) {
+      let divAdd = document.createElement('div');
+      divAdd.className = 'pixel';
+      quadroPixel.appendChild(divAdd);
+    }
+  }
+  if (size === 9) {
+    for (let index = 1; index <= 16; index += 1) {
+      let divAdd = document.createElement('div');
+      divAdd.className = 'pixel';
+      quadroPixel.appendChild(divAdd);
+    }
+  }
+  if (size === 16) {
+    for (let index = 1; index <= 9; index += 1) {
+      let divAdd = document.createElement('div');
+      divAdd.className = 'pixel';
+      quadroPixel.appendChild(divAdd);
+    }
+  }
+}
 
 minSize = minSize(changeValue);
 
-/* for (let index = 1; index <= 1; index += 1) {
-    let divAdd = document.createElement('div');
-    divAdd.className = 'pixel';
-    quadroPixel.appendChild(divAdd);  
-}} */
+/* window.onload=function random() {
+  for (let index = 0; index <= pixel.length - 1; index += 1) {
+    let r = Math.random() * 255;
+    let g = Math.random() * 255;
+    let b = Math.random() * 255;
+    let select = document.getElementsByClassName('pixel')[index]
+    select.style.background = `rgba(${r}, ${g}, ${b})`;
+  }
+}
+ */
 
-/*      pixel[index].style.width = changeValue;
-     pixel[index].style.height = changeValue;
-     pixel[index].style.className = 'pixel';
-     let select = document.getElementsByClassName('pixel')[index];
-    if (select.classList.contains('color')) {
-      select.style.background = select = select.className = 'pixel'; */
-
-//sessionStorage.setItem('CorFundo', colorInput.value)
-//sessionStorage.setItem('background',JSON.stringify(changeBackground)) */
-//const changeSizer = document.querySelector('.pixel')

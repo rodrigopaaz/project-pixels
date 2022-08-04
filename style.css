@@ -54,14 +54,14 @@ border-radius: 100%;
             }
 
             .color.red.pixel {
-                background-color: red;
+                background: red;
             }
             .color.blue.pixel {
-                background-color: blue;
+                background: blue;
             }
             .color.black.pixel {
-                background-color: black;
+                background: black;
             }
             .color.green.pixel {
-                background-color: green;
+                background: green;
             }
