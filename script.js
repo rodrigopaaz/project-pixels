@@ -1,16 +1,16 @@
-let quadroPixel = document.getElementById('pixel-board');
+const quadroPixel = document.getElementById('pixel-board');
 const divAdd1 = document.createElement('div');
-let pixel = document.getElementsByClassName('pixel');
+const pixel = document.getElementsByClassName('pixel');
 divAdd1.className = 'color';
 const paleta = document.getElementById('color-palette');
 
-let blue = document.querySelector('.color.blue');
-let black = document.querySelector('.color.black');
-let red = document.querySelector('.color.red');
-let green = document.querySelector('.color.green');
+const blue = document.querySelector('.color.blue');
+const black = document.querySelector('.color.black');
+const red = document.querySelector('.color.red');
+const green = document.querySelector('.color.green');
 
 for (let index = 1; index <= 25; index += 1) {
-  let divAdd = document.createElement('div');
+  const divAdd = document.createElement('div');
   divAdd.className = 'pixel';
   quadroPixel.appendChild(divAdd);
 }
@@ -49,24 +49,25 @@ paleta.addEventListener('click', (object) => {
 
 quadroPixel.addEventListener('click', (object) => {
   let capturaCor = (object.target.className = 'pixel');
-  let select = sessionStorage.cor;
-  capturaCor = object.target.style.background =select;
+  const select = sessionStorage.cor;
+  capturaCor = object.target.style.background = select;
 
 });
 
-let reset = document.getElementById('clear-board');
+const reset = document.getElementById('clear-board');
 reset.addEventListener('click', () => {
   for (let index = 0; index <= 24; index += 1) {
-    let select = document.getElementsByClassName('pixel')[index];
-    if (select.style.background != 'white') {
-      select.style.background = select = select.style.background = 'white';
+    const select = document.getElementsByClassName('pixel')[index];
+    if (select.style.background !== 'white') {
+      select.style.background = select;
+      select.style.background = 'white';
     }
   }
 });
 
-let changeSize = document.getElementById('size');
-changeSize.addEventListener('submit', function () {
-  let sizeInput = document.querySelector('#board-size');
+const changeSize = document.getElementById('size');
+changeSize.addEventListener('submit', () => {
+  const sizeInput = document.querySelector('#board-size');
   sizeInput.value = Number(sizeInput.value) * Number(sizeInput.value);
   if (sizeInput.value <= 0) {
     alert('Board inválido!');
@@ -78,16 +79,16 @@ let changeValue = sessionStorage.size;
 changeValue = Number(changeValue);
 if (changeValue > 0 && changeValue < 250) {
   for (let index = 0; index <= changeValue - 1; index += 1) {
-    let divAdd = document.createElement('div');
+    const divAdd = document.createElement('div');
     divAdd.className = 'pixel';
     quadroPixel.appendChild(divAdd);
   }
 }
 
 if (changeValue >= 2500) {
-    quadroPixel.style.width='1000px'
+    quadroPixel.style.width = '1000px';
   for (let index = 1; index <= 2500; index += 1) {
-    let divAdd = document.createElement('div');
+    const divAdd = document.createElement('div');
     divAdd.className = 'pixel';
     quadroPixel.appendChild(divAdd);
   }
@@ -107,28 +108,28 @@ if (changeValue > 0) {
 function minSize(size) {
   if (size === 1) {
     for (let index = 1; index <= 24; index += 1) {
-      let divAdd = document.createElement('div');
+      const divAdd = document.createElement('div');
       divAdd.className = 'pixel';
       quadroPixel.appendChild(divAdd);
     }
   }
   if (size === 4) {
     for (let index = 1; index <= 21; index += 1) {
-      let divAdd = document.createElement('div');
+      const divAdd = document.createElement('div');
       divAdd.className = 'pixel';
       quadroPixel.appendChild(divAdd);
     }
   }
   if (size === 9) {
     for (let index = 1; index <= 16; index += 1) {
-      let divAdd = document.createElement('div');
+      const divAdd = document.createElement('div');
       divAdd.className = 'pixel';
       quadroPixel.appendChild(divAdd);
     }
   }
   if (size === 16) {
     for (let index = 1; index <= 9; index += 1) {
-      let divAdd = document.createElement('div');
+      const divAdd = document.createElement('div');
       divAdd.className = 'pixel';
       quadroPixel.appendChild(divAdd);
     }

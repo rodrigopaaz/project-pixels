@@ -1,7 +1,16 @@
 
+body {
+    background-image: url(background.jpg);
+}
+h1{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+
 
 .pixel {
-    background-color: white;
+    background-color: rgb(219, 205, 205);
     border: 1px solid black;
     display: inline-block;
     width: 40px;
@@ -9,7 +18,7 @@
 }
 
 #pixel-board {
-    margin: 50px 0 0 120px;
+    margin: 50px auto 0 auto;
     width: 210px;
     line-height: 0px;
     word-spacing: 0px;
@@ -22,7 +31,7 @@ border: 1px solid black;
 display: inline-block;
 width: 100px;
 height: 100px;
-margin: 20 20 20 20 ;
+margin-left: 30px;
 border-radius: 100%;
 }
 #color-palette .red{
@@ -43,6 +52,17 @@ border-radius: 100%;
         margin: 20 20 20 20 ;
         border-radius: 100%;
         }
+
+        #clear-board{
+
+            margin: 25px auto 25px 200px
+        }
+
+        form{
+
+            margin-left: 130px;
+        }
+
         #color-palette .green{
             background-color: green;
             border: 1px solid black;
@@ -64,4 +84,8 @@ border-radius: 100%;
             }
            .green {
                 background: green;
+            }
+
+            #color-palette {
+                display: fixed;
             }
